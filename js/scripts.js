@@ -32,6 +32,11 @@ $(function () {
     }
 
 
+    $('body').addClass(isMobile() ? 'screen--mobile' : 'screen--standard');
+    $('.current-year').html(new Date().getFullYear());
+    $('.start-year').html(new Date().getFullYear() - 2007);
+
+
     // menu
     $('.menu__icon').on('click', function () {
         $('.menu').toggleClass('menu--active');

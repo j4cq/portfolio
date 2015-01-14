@@ -1,15 +1,9 @@
-<?php
-    function isMobile() {
-        return preg_match("/i(Phone|Pod)/i", $_SERVER["HTTP_USER_AGENT"]);
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en" class="no-js no-touch">
     <head>
         <meta charset="utf-8">
         <title>Jacqueline Wheeler</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0<?php if (isMobile()): ?>, minimal-ui=1<?php endif; ?>" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
         <link rel="stylesheet" href="fonts/icon-font/css/icon-font.css" />
         <link rel="stylesheet" href="css/styles.css" />
@@ -29,7 +23,7 @@
         <link href='http://fonts.googleapis.com/css?family=Loved+by+the+King|Oswald:700|Open+Sans:400,600' rel='stylesheet' type='text/css'>
     </head>
 
-    <body class="screen--<?php echo (isMobile() ? 'mobile' : 'standard'); ?>">
+    <body>
         <div class="preloader">
             <div class="preloader__icon">
                 <h1 class="preloader__title">Jac<small>q</small>ueline<br>Wheeler</h1>
@@ -53,7 +47,7 @@
                     <li class="menu__item"><a class="internal" href="#contact">Contact</a></li>
                 </ul>
 
-                <div class="menu__copyright">&copy; <?php echo date("Y"); ?> Jacqueline Wheeler. All rights reserved.</div>
+                <div class="menu__copyright">&copy; <span class="current-year"></span> Jacqueline Wheeler. All rights reserved.</div>
             </div>
         </nav>
 
@@ -84,7 +78,7 @@
 
                 <h2>A bit about me...</h2>
 
-                <p>Right from my first day in high school IT, I knew that I loved everything about websites. One IT degree, <?php echo date("Y") - 2007; ?> years of professional experience and many caffeine-fuelled late nights later, I am happy to say that I've been able to turn my passion into a career.</p>
+                <p>Right from my first day in high school IT, I knew that I loved everything about websites. One IT degree, <span class="start-year"></span> years of professional experience and many caffeine-fuelled late nights later, I am happy to say that I've been able to turn my passion into a career.</p>
 
                 <p>These days, I work together with designers to make stunning, responsive, pixel-perfect designs for web, tablet and mobile devices. This site is just a small example of what I love to do.</p>
 
@@ -95,9 +89,7 @@
             <img class="item item--pens" src="images/items/pens.png" alt="" />
 
 
-            <?php if (!isMobile()): ?>
-                <img class="item item--ipad" src="images/items/ipad.png" alt="" />
-            <?php endif; ?>
+            <img class="item item--ipad" src="images/items/ipad.png" alt="" />
 
 
             <section class="container block block--skills">
