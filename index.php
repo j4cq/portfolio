@@ -1,0 +1,215 @@
+<?php
+    function isMobile() {
+        return preg_match("/i(Phone|Pod)/i", $_SERVER["HTTP_USER_AGENT"]);
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="en" class="no-js no-touch">
+    <head>
+        <meta charset="utf-8">
+        <title>Jacqueline Wheeler</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0<?php if (isMobile()): ?>, minimal-ui=1<?php endif; ?>" />
+
+        <link rel="stylesheet" href="fonts/icon-font/css/icon-font.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+
+        <script src="js/libs/jquery-1.11.0.min.js"></script>
+        <script src="js/libs/jquery.easing.js"></script>
+        <script src="js/libs/jquery.scrollpath.js"></script>
+        <script src="js/libs/fastclick.js"></script>
+        <script src="js/libs/mustache.js"></script>
+        <script src="js/scripts.js"></script>
+
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Loved+by+the+King|Oswald:700|Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body class="screen--<?php echo (isMobile() ? 'mobile' : 'standard'); ?>">
+        <div class="preloader">
+            <div class="preloader__icon">
+                <h1 class="preloader__title">Jac<small>q</small>ueline<br>Wheeler</h1>
+                <div class="preloader__progress"></div>
+            </div>
+        </div>
+
+
+        <div id="portfolio-modal" class="modal"></div>
+
+
+        <nav class="menu">
+            <div class="menu__inner container">
+                <i class="menu__icon icon-ellipsis"></i>
+
+                <ul class="menu__items">
+                    <li class="menu__item"><a class="internal" href="#intro">Hello</a></li>
+                    <li class="menu__item"><a class="internal" href="#about">About</a></li>
+                    <li class="menu__item"><a class="internal" href="#skills">Skills</a></li>
+                    <li class="menu__item"><a class="internal" href="#portfolio">Work</a></li>
+                    <li class="menu__item"><a class="internal" href="#contact">Contact</a></li>
+                </ul>
+
+                <div class="menu__copyright">&copy; <?php echo date("Y"); ?> Jacqueline Wheeler. All rights reserved.</div>
+            </div>
+        </nav>
+
+
+        <div id="scroll-view" class="wrapper">
+
+
+            <img class="item item--chair" src="images/items/chair.png" alt="" />
+
+
+            <section class="container block block--intro">
+                <a id="end" class="anchor"></a>
+                <a id="intro" class="anchor"></a>
+
+                <h1 class="preloader-position">Jac<small>q</small>ueline<br>Wheeler</h1>
+                <h2>Hello!</h2>
+
+                <p>My name is Jacqueline Wheeler and I'm a front end web developer. I&nbsp;am passionate about creating beautiful, responsive and pixel perfect design.</p>
+
+                <p>This is where I keep my <a href="#portfolio" class="internal">online portfolio</a>. Feel free to have a look around and <a href="#contact" class="internal">get&nbsp;in&nbsp;touch</a>.</p>
+
+                <p><a href="#about" class="internal handwriting">start scrolling<i class="arrow icon-down-big"></i></a></p>
+            </section>
+
+
+            <section class="container block block--about">
+                <a id="about" class="anchor"></a>
+
+                <h2>A bit about me...</h2>
+
+                <p>Right from my first day in high school IT, I knew that I loved everything about websites. One IT degree, <?php echo date("Y") - 2007; ?> years of professional experience and many caffeine-fuelled late nights later, I am happy to say that I've been able to turn my passion into a career.</p>
+
+                <p>These days, I work together with designers to make stunning, responsive, pixel-perfect designs for web, tablet and mobile devices. This site is just a small example of what I love to do.</p>
+
+                <p><a href="#skills" class="internal handwriting"><i class="arrow icon-left-big"></i>on to skills</a></p>
+            </section>
+
+
+            <img class="item item--pens" src="images/items/pens.png" alt="" />
+
+
+            <?php if (!isMobile()): ?>
+                <img class="item item--ipad" src="images/items/ipad.png" alt="" />
+            <?php endif; ?>
+
+
+            <section class="container block block--skills">
+                <a id="skills" class="anchor"></a>
+
+                <h2>Skills:</h2>
+
+                <h3>Design &amp; Programming</h3>
+                <ul class="list">
+                    <li class="list__item"><i class="list__item__icon icon-right"></i>HTML5, CSS3, JS and jQuery</li>
+                    <li class="list__item"><i class="list__item__icon icon-right"></i>LESS CSS</li>
+                    <li class="list__item"><i class="list__item__icon icon-right"></i>HTML5 Canvas</li>
+                    <li class="list__item"><i class="list__item__icon icon-right"></i>Responsive and adaptive web user interfaces</li>
+                    <li class="list__item"><i class="list__item__icon icon-right"></i>Standards and cross-browser compliant code</li>
+                    <li class="list__item"><i class="list__item__icon icon-right"></i>Performant client-side code</li>
+                    <li class="list__item"><i class="list__item__icon icon-right"></i>Web, app and print design</li>
+                    <li class="list__item"><i class="list__item__icon icon-right"></i>Experience with PHP, Groovy and Java</li>
+                    <li class="list__item"><i class="list__item__icon icon-right"></i>Experience with SQL and relational database design</li>
+                    <li class="list__item"><i class="list__item__icon icon-right"></i>Experience with open source CMS and e-commerce platforms such as Wordpress and Magento</li>
+                    <li class="list__item"><i class="list__item__icon icon-right"></i>Version control using git</li>
+                </ul>
+
+                <h3>Applications</h3>
+                <ul class="list">
+                    <li class="list__item"><i class="list__item__icon icon-right"></i>Adobe CC Photoshop, Illustrator</li>
+                    <li class="list__item"><i class="list__item__icon icon-right"></i>Sketch 3</li>
+                </ul>
+
+                <p><a href="#portfolio" class="internal handwriting">view portfolio<i class="arrow icon-down-big"></i></a></p>
+            </section>
+
+
+            <section class="container block block--portfolio">
+                <a id="portfolio" class="anchor"></a>
+
+                <h2>Here's some of my work.</h2>
+
+                <p class="hint">(Click on thumbnails to expand)</p>
+
+                <p>Have a look through to see what I'm capable of. If you'd like to see more, or get more information about specific projects, <a href="#contact" class="internal">drop me a line</a>.</p>
+
+                <p><a href="#contact" class="internal handwriting">get in touch<i class="arrow icon-right-big"></i></a></p>
+            </section>
+
+
+            <ul id="portfolio-items" class="portfolio container"></ul>
+
+
+            <script id="item-template" type="text/html">
+                <li class="portfolio__item">
+                    <a {{#url}}href="http://{{url}}" target="_blank"{{/url}} class="show-modal" data-id="{{id}}"><span class="{{images.thumb}}"></span></a>
+                </li>
+            </script>
+
+            <script id="modal-template" type="text/html">
+                <div class="modal__content">
+                    <div class="modal__hero">
+                        <a {{#url}}href="http://{{url}}" target="_blank" {{/url}}class="modal__hero__bg" style="background-image: url('images/portfolio/{{images.full}}');"></a>
+
+                        <i class="icon-load"></i>
+
+                        <img src="images/portfolio/{{images.full}}" alt="{{title}}">
+                    </div>
+
+                    <div class="modal__body">
+                        <a class="modal__close icon-cancel"></a>
+
+                        <h2>{{title}}</h2>
+                        <p>{{description}}</p>
+
+                        {{#url}}
+                            <a href="http://{{url}}" target="_blank"><i class="icon-link"></i>{{url}}</a>
+                        {{/url}}
+
+                        <hr />
+
+                        {{#responsibilities.length}}
+                            <h3>Responsibilities</h3>
+                        {{/responsibilities.length}}
+
+                        {{#responsibilities}}
+                            <h4>{{title}}</h4>
+                            <ul class="list">
+                                {{#points}}
+                                    <li class="list__item"><i class="list__item__icon icon-right"></i>{{.}}</li>
+                                {{/points}}
+                            </ul>
+                        {{/responsibilities}}
+                    </div>
+                </div>
+            </script>
+
+
+            <img class="item item--iphone" src="images/items/iphone.png" alt="" />
+
+
+            <section class="container block block--contact">
+                <a id="contact" class="anchor"></a>
+
+                <h2>Get in touch!</h2>
+
+                <p>Contact me on one of the following and I'll get back to you as soon as I can. In the meantime, feel free to have a look around.</p>
+
+                <p>
+                    <a href="mailto:hello@jacquelinewheeler.com.au?subject=Enquiry from JacquelineWheeler.com.au" class="button" title="Email"><i class="icon-mail"></i></a>
+                    <a href="http://au.linkedin.com/pub/jacqueline-wheeler/69/424/876/" target="_blank" class="button" title="LinkedIn"><i class="icon-linkedin"></i></a>
+                    <a href="https://github.com/j4cq" target="_blank" class="button" title="GitHub"><i class="icon-github"></i></a>
+                </p>
+
+                <p><a href="#end" class="internal handwriting">back to the beginning<i class="arrow icon-up-big"></i></a></p>
+            </section>
+        </div>
+
+    </body>
+</html>

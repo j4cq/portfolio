@@ -1,0 +1,44 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: @grey-lightest no-repeat center center fixed;
+    background-size: cover;
+    font-family: @body-font;
+    font-weight: @body-weight;
+    font-size: @font-size;
+    color: @color-text;
+    line-height: @line-height;
+    -webkit-font-smoothing: antialiased;
+
+    &.screen--mobile {
+        background-image: url('../images/bg-mobile.jpg');
+    }
+
+    &.screen--standard {
+        background-image: url('../images/bg.jpg');
+    }
+
+    &.scroll-view {
+        overflow: hidden;
+    }
+}
+
+.sp-canvas {
+    .scale(0);
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    overflow: hidden;
+    .translateX(0);
+
+    .scroll-view & {
+        width: auto;
+        overflow: visible;
+    }
+}

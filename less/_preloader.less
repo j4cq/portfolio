@@ -1,0 +1,54 @@
+.preloader {
+    // display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999;
+    background: @color-dark;
+
+    .no-js & {
+        display: none;
+    }
+}
+
+.preloader__icon {
+    position: absolute;
+    opacity: 0;
+}
+
+@overflow: -5px;
+
+.preloader__progress {
+    position: absolute;
+    top: @overflow;
+    left: @overflow;
+    right: @overflow;
+    bottom: @overflow;
+    background: @color-dark;
+    opacity: 0.95;
+    .transition(all 20s linear);
+}
+
+.preloader__title {
+    color: @grey-lightest;
+    margin: 0;
+}
+
+.preloader--start {
+    .preloader__icon {
+        opacity: 1;
+    }
+
+    .preloader__progress {
+        .translateX(50%);
+    }
+}
+
+.preloader--complete {
+    .preloader__progress {
+        .translateX(100%);
+        .transition(all 0.6s ease);
+    }
+}

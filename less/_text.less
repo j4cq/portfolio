@@ -1,0 +1,192 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0 0 0.3em;
+    color: @color-dark;
+    font-weight: @regular-weight;
+    line-height: 1;
+}
+
+h1 {
+    letter-spacing: -0.03em;
+    font-size: 3em;
+    line-height: 0.92;
+    text-transform: uppercase;
+    font-family: @headline-font;
+    font-weight: @headline-weight;
+
+    small {
+        position: relative;
+        top: -0.1em;
+        font-size: 0.9em;
+    }
+}
+
+h2 {
+    font-size: 1.7em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+a {
+    color: @grey-darker;
+    font-weight: @bold-weight;
+    text-decoration: none;
+    .transition(all 0.15s ease);
+
+    .no-touch &:hover {
+        color: @color-accent;
+    }
+}
+
+.anchor {
+    display: block;
+    width: 100%;
+    position: relative;
+    top: -@spacing * 4;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid @grey-lightest;
+    margin: @spacing * 3 auto;
+}
+
+.media-small() {
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
+
+.media-medium() {
+    h1 {
+        font-size: 5em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+}
+
+.list {
+    font-size: 0.95em;
+
+    &,
+    .list__item {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    & {
+        margin: 0 0 1em;
+    }
+
+    .list__item {
+        padding-left: 1em;
+
+        + .list__item {
+            margin-top: 0.2em;
+        }
+    }
+
+    .list__item__icon {
+        margin-left: -1em;
+    }
+}
+
+.list__item__icon {
+    color: @black;
+    margin-right: 5px;
+
+    &:before {
+        margin: 0;
+        width: 0.6em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.hint {
+    font-size: 0.8em;
+    margin: 0 0 0.8em;
+}
+
+.handwriting {
+    display: none;
+    font-family: @handwriting-font;
+    font-weight: @handwriting-weight;
+    font-size: 1.7em;
+    color: lighten(@color-text, 25%);
+    margin: 0.7em 0 0;
+    word-spacing: -8px;
+
+    &:hover {
+        color: @color-accent;
+    }
+
+    .arrow {
+        position: relative;
+        top: 0.15em;
+        font-size: 0.6em;
+        vertical-align: middle;
+
+        &.icon-up-big {
+            top: 0;
+        }
+    }
+
+    .scroll-view & {
+        .ib;
+    }
+}
+
+.button {
+    display: inline-block;
+    width: 3.5em;
+    height: 3.5em;
+    line-height: 3.5em;
+    text-align: center;
+    background: @color-text;
+    .border-radius(50%);
+    color: #fff;
+    .transition(all 0.15s ease);
+
+    .no-touch &:hover {
+        background: @color-secondary;
+        color: @grey-darker;
+    }
+
+    + .button {
+        margin-left: 5px;
+    }
+
+    i {
+        font-size: 1.2em;
+    }
+
+    .icon-linkedin {
+        position: relative;
+        top: -0.05em;
+    }
+}

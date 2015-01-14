@@ -1,0 +1,60 @@
+// spacing units
+// -------------
+
+// based off 10px unit
+@spacing: 10em / @font-size;
+
+
+// colors
+// ------
+
+@color-text: #7c7f88;
+@color-accent: #ff3838;
+@color-secondary: #bffd48;
+@color-dark: #27282b;
+
+@shade-step: 15%;
+
+// greyscale
+
+@black: #000;
+@grey-darkest: darken(@grey, @shade-step * 2.45);
+@grey-darker: darken(@grey, @shade-step * 2);
+@grey-dark: darken(@grey, @shade-step * 1);
+@grey: #777;
+@grey-light: lighten(@grey, @shade-step * 1);
+@grey-lighter: lighten(@grey, @shade-step * 2);
+@grey-lightest: lighten(@grey, @shade-step * 3);
+@white: #fff;
+
+
+// breakpoints
+// -----------
+
+@extra-small: 28em;
+@small: 36em;
+@small-medium: 44em;
+@medium: 57em;
+@medium-large: 66em;
+@large: 83em;
+@extra-large: 100em;
+
+
+// fonts
+// -----
+
+@font-size: 16px;
+@line-height: 1.3;
+
+@regular-weight: 400;
+@bold-weight: 600;
+
+
+@headline-font: 'Oswald', sans-serif;
+@headline-weight: 700;
+
+@body-font: 'Open Sans', sans-serif;
+@body-weight: @regular-weight;
+
+@handwriting-font: 'Loved by the King', cursive;
+@handwriting-weight: 400;
