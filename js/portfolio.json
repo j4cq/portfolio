@@ -5,13 +5,56 @@
         "url": "ohdeergames.com",
         "images": {
             "thumb": "thumb--ohdeer",
-            "full": "ohdeer.jpg"
+            "full": "ohdeergames.jpg"
         },
         "responsibilities": [
             {
                 "title": "Website",
                 "points": [
                     "Web design",
+                    "Front end development",
+                    "Custom JS components",
+                    "Optimised animation",
+                    "Fully responsive design"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "hey messenger",
+        "description": "An interactive one page site created for a new secure messaging app. The focus was to showcase information in an engaging, interactive way.",
+        "url": "hey-messenger.com",
+        "images": {
+            "thumb": "thumb--hey",
+            "full": "hey.jpg"
+        },
+        "responsibilities": [
+            {
+                "title": "Website",
+                "points": [
+                    "Website design",
+                    "Front end development",
+                    "Custom JS components",
+                    "Optimised animation",
+                    "Fully responsive design"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Digital Asset Group",
+        "description": "An interactive one page site created for a technology company.",
+        "url": "digitalassetgroup.com.au",
+        "images": {
+            "thumb": "thumb--dag",
+            "full": "dag.jpg"
+        },
+        "responsibilities": [
+            {
+                "title": "Website",
+                "points": [
+                    "Brand identity",
+                    "Website design",
                     "Front end development",
                     "Custom JS components",
                     "Optimised animation",
@@ -44,7 +87,6 @@
     {
         "title": "DRoP Challenge",
         "description": "A fun landing page for an upcoming iOS game that needed to provide some teaser entertainment.",
-        "url": "dropchallenge.com",
         "images": {
             "thumb": "thumb--drop",
             "full": "drop.jpg"
@@ -138,7 +180,6 @@
     {
         "title": "Just Digital People",
         "description": "An awesome new recruitment company that needed a website to match.",
-        "url": "www.justdigitalpeople.com.au",
         "images": {
             "thumb": "thumb--jdp",
             "full": "jdp.jpg"
@@ -340,26 +381,6 @@
         ]
     },
     {
-        "title": "Gastar Hair",
-        "description": "A boutique hair salon, located in the southern Gold Coast, that required a website to showcase their style galleries and notify customers of their latest events. Gastar Hair already had an established brand image, so they needed a website concept that reflected their style.",
-        "url": "www.gastarhair.com.au",
-        "images": {
-            "thumb": "thumb--gastar",
-            "full": "gastar.jpg"
-        },
-        "responsibilities": [
-            {
-                "title": "Website",
-                "points": [
-                    "Website design",
-                    "CMS",
-                    "Gallery",
-                    "Latest news feed"
-                ]
-            }
-        ]
-    },
-    {
         "title": "Octave Corporate Rentals",
         "description": "A company that provides rental properties for energy related company employees in Queensland. They required a website that could display property listings and latest news, with a design that was in keeping with the corporate nature of their target market.",
         "url": "www.octavecorporaterentals.com.au",
@@ -376,29 +397,6 @@
                     "CMS",
                     "Property listings and search",
                     "Latest news feed"
-                ]
-            }
-        ]
-    },
-    {
-        "title": "Intricate Links",
-        "description": "An Australian natural therapies company that takes a holistic approach to health and wellbeing. They required a website that could help increase their exposure to a larger audience. Having already started the development of their branding, they required a website and logo design that could complement their company image.",
-        "url": "www.intricatelinks.com.au",
-        "images": {
-            "thumb": "thumb--intricatelinks",
-            "full": "intricatelinks.jpg"
-        },
-        "responsibilities": [
-            {
-                "title": "Website",
-                "points": [
-                    "Brand identity",
-                    "Website design",
-                    "Front end development",
-                    "Flash animation",
-                    "CMS",
-                    "Latest news feed",
-                    "Articles"
                 ]
             }
         ]

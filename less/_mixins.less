@@ -294,7 +294,6 @@
 // -------
 
 .opacity(@opacity) {
-    filter: progid:DXImageTransform.Microsoft.Alpha(opacity = (@opacity * 100));
     -moz-opacity: @opacity;
     opacity: @opacity;
 }
@@ -368,12 +367,4 @@
 // [none, antialiased, subpixel-antialiased]
 .font-smoothing(@smoothing: antialiased) {
     -webkit-font-smoothing: @smoothing;
-}
-
-
-// grid
-// ----
-
-.column(@span: 1) {
-    width: (100% / @columns) * span;
 }

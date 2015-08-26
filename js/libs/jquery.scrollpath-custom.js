@@ -37,7 +37,7 @@
 
 		// Default speeds for scrolling and rotating (with path.rotate())
 		speeds = {
-			scrollSpeed: 50,
+			scrollSpeed: 30,
 			rotationSpeed: Math.PI/15
 		},
 

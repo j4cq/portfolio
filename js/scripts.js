@@ -229,7 +229,7 @@ function initScrollpath(element){
             e.preventDefault();
 
             // scroll to location
-            $.fn.scrollPath("scrollTo", target, 1000, "easeInOutSine");
+            $.fn.scrollPath("scrollTo", target, 1300, "easeInOutSine");
         });
     });
 }
